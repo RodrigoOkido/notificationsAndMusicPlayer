@@ -13,6 +13,9 @@
 		2B2E0FD026D8001D0033DC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2E0FCE26D8001D0033DC39 /* Main.storyboard */; };
 		2B2E0FD226D8001E0033DC39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2E0FD126D8001E0033DC39 /* Assets.xcassets */; };
 		2B2E0FD526D8001E0033DC39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2E0FD326D8001E0033DC39 /* LaunchScreen.storyboard */; };
+		2B6EA6A826D956CC00084588 /* the-way-home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B6EA6A726D956CC00084588 /* the-way-home.mp3 */; };
+		2B6EA6AA26D962DE00084588 /* MusicPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EA6A926D962DE00084588 /* MusicPlayerController.swift */; };
+		2B6EA6AC26D96B7300084588 /* cinematic-chillhop-main.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B6EA6AB26D96B7300084588 /* cinematic-chillhop-main.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2B2E0FD126D8001E0033DC39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2E0FD426D8001E0033DC39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B2E0FD626D8001E0033DC39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6EA6A726D956CC00084588 /* the-way-home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "the-way-home.mp3"; sourceTree = "<group>"; };
+		2B6EA6A926D962DE00084588 /* MusicPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerController.swift; sourceTree = "<group>"; };
+		2B6EA6AB26D96B7300084588 /* cinematic-chillhop-main.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cinematic-chillhop-main.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +68,10 @@
 				2B2E0FCE26D8001D0033DC39 /* Main.storyboard */,
 				2B2E0FD126D8001E0033DC39 /* Assets.xcassets */,
 				2B2E0FD326D8001E0033DC39 /* LaunchScreen.storyboard */,
+				2B6EA6A726D956CC00084588 /* the-way-home.mp3 */,
+				2B6EA6AB26D96B7300084588 /* cinematic-chillhop-main.mp3 */,
 				2B2E0FD626D8001E0033DC39 /* Info.plist */,
+				2B6EA6A926D962DE00084588 /* MusicPlayerController.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -124,7 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6EA6A826D956CC00084588 /* the-way-home.mp3 in Resources */,
 				2B2E0FD526D8001E0033DC39 /* LaunchScreen.storyboard in Resources */,
+				2B6EA6AC26D96B7300084588 /* cinematic-chillhop-main.mp3 in Resources */,
 				2B2E0FD226D8001E0033DC39 /* Assets.xcassets in Resources */,
 				2B2E0FD026D8001D0033DC39 /* Main.storyboard in Resources */,
 			);
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6EA6AA26D962DE00084588 /* MusicPlayerController.swift in Sources */,
 				2B2E0FCD26D8001D0033DC39 /* ViewController.swift in Sources */,
 				2B2E0FC926D8001D0033DC39 /* AppDelegate.swift in Sources */,
 				2B2E0FCB26D8001D0033DC39 /* SceneDelegate.swift in Sources */,
