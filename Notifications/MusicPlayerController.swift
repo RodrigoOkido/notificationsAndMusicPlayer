@@ -9,6 +9,9 @@ import UIKit
 import AVFoundation
 
 
+/**
+ Struct Music.
+ */
 struct Music {
     let image: UIImage
     let name: String
@@ -17,6 +20,10 @@ struct Music {
     let format: String
 }
 
+
+/**
+ Simple example to demonstrate how to play a music file using AVFoundation.
+ */
 class MusicPlayerController: UIViewController, AVAudioPlayerDelegate, ObservableObject {
 
     // MARK: CLASS VARIABLES
@@ -53,21 +60,21 @@ class MusicPlayerController: UIViewController, AVAudioPlayerDelegate, Observable
             }
             
             if playButton.backgroundImage(for: .normal) == UIImage(systemName: "play.fill") {
-                
-                
                 playButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
                 player.play()
             } else {
                 playButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
                 player.pause()
-
             }
             
-        }catch{
+        } catch {
             print("Something went bad")
         }
     }
     
+    /**
+     Back the music track.
+     */
     @IBAction func backMusic(_ sender: Any) {
         musicImage.image = playSong.image
         musicNameLabel.text = "The Way Home"
@@ -77,7 +84,9 @@ class MusicPlayerController: UIViewController, AVAudioPlayerDelegate, Observable
         playButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
     }
     
-    
+    /**
+     Forward the music track.
+     */
     @IBAction func forwardMusic(_ sender: Any) {
         musicImage.image = playSong2.image
         musicNameLabel.text = "Cinematic Chillhop Main"
@@ -89,6 +98,8 @@ class MusicPlayerController: UIViewController, AVAudioPlayerDelegate, Observable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set rounded borders.
         musicImage.clipsToBounds = true
         musicImage.layer.cornerRadius = 20
         musicImage.image = playSong.image

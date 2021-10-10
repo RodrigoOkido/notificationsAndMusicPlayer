@@ -31,7 +31,9 @@ class ViewController: UIViewController, ObservableObject {
         }
     }
     
-    
+    /**
+     Sends the notification to the notification center. Checks if title and content notification contains text. If ok, it will ask user permission to deliver notifications (first time only), and once authorized, will call deliverNotification function. Otherwise notification will not work if user do not allow to it, or do not typed anything on title or body.
+     */
     @IBAction func sendRequest(_ sender: Any) {
         if notificationTitle.hasText && notificationContent.hasText {
             let current = UNUserNotificationCenter.current()
@@ -81,21 +83,29 @@ class ViewController: UIViewController, ObservableObject {
         notifyButton.layer.cornerRadius = 10
     }
     
-
     
+    /**
+     Prepares notification and dispatch to notification center. If time is defined, the notification will
+     only appear to you on the time specified. Otherwise it will notify you in 10 seconds after you clicked.
+     */
     func deliverNotification(title: String, body: String, at: UIDatePicker) {
         
+        // Defines the datePicker component to set the time if user
+        // defined.
         at.datePickerMode = .time
         let actualTime = at.date
         var getTime = DateComponents()
         getTime.hour = at.calendar.component(.hour, from: actualTime)
         getTime.minute = at.calendar.component(.minute, from: actualTime)
         
+        // Create the notification content
         let content = UNMutableNotificationContent()
                 content.title = title
                 content.body = body
                 content.sound = UNNotificationSound.default
                 
+        
+        // Check timeToggle status.
         if !defineTimeToggle {
             print("Sending in the time specified...")
             let trigger = UNCalendarNotificationTrigger(dateMatching: getTime, repeats: false)
